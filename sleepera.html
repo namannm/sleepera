@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleepera | Smart Adaptive Thermal Wearable</title>
+    <link href="https://www.sleepera.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --bg: #050a10;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* 3D Animated Background Background */
+        .gradient-sphere {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--secondary), transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.3;
+            animation: float 20s infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-10%, -10%); }
+            100% { transform: translate(50%, 40%); }
+        }
+
+        nav {
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+        }
+
+        .features {
+            padding: 5rem 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 24px;
+            backdrop-filter: blur(15px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .deep-tech-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 5px;
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            border-top: 1px solid var(--border);
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gradient-sphere"></div>
+
+    <nav>
+        <div class="logo">SLEEPERA</div>
+        <div>
+            <button class="cta-button">Help</button>
+        </div>
+    </nav>
+
+    <header>
+        <span class="deep-tech-tag">Deep-Tech Health Solutions</span>
+        <h1>Your Sleep, <br>Intelligently Regulated.</h1>
+        <p class="hero-subtitle">
+            The world’s first smart adaptive thermal wearable that monitors your body in real-time to provide precise heating and cooling for faster recovery.
+        </p>
+        <button class="cta-button">Explore the Technology</button>
+    </header>
+
+    <section class="features">
+        <div class="card">
+            <div class="deep-tech-tag">Sensor Intelligence</div>
+            <h3>Thermal Sensing</h3>
+            <p>Embedded skin-temperature sensors monitor fluctuations near the neck and forehead, adjusting modes automatically.</p>
+        </div>
+        <div class="card">
+            <div class="deep-tech-tag">Hybrid Architecture</div>
+            <h3>Safe-Cool Tech</h3>
+            <p>Passive cooling gel modules paired with active thermal monitoring ensure medical-grade safety during sleep.</p>
+        </div>
+        <div class="card">
+            <div class="deep-tech-tag">Scalable AI</div>
+            <h3>Adaptive Personalization</h3>
+            <p>The system is designed to be AI-scalable, allowing future integration of predictive comfort algorithms.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Sleepera Technologies. Rethinking Recovery.
+    </footer>
+
+</body>
+</html>
